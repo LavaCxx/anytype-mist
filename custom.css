@@ -301,3 +301,10 @@ body::before,
 .empty, .emptyText {
   color: #0009;
 }
+
+.toast{
+    background-color: #0009;
+    backdrop-filter: blur(16px);
+    color:#fff;
+    border-radius: 6px;
+}
