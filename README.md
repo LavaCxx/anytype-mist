@@ -5,7 +5,7 @@ A modernized Anytype theme.
 
 # Features
 1.  🌁 Using transparency and frosted glass effects.
-2.  🔧 Fix the [CLS](https://web.dev/articles/cls) issue caused by the scroll bar inside the sidebar.
+2.  🔧 Fix the [CLS](https://web.dev/articles/cls) issue caused by the scroll bar inside the side bar.
 3.  🚫 Currently only supports light mode.
 
 # How to use
