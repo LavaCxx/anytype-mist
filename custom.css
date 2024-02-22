@@ -1,3 +1,4 @@
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -15,7 +16,7 @@
 }
 
 :root {
-  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable; */
   --color-bg-primary: #fff0;
   --color-shape-highlight-medium: #0002;
   --color-control-accent: #000d;
@@ -42,34 +43,51 @@ body::before {
     #182336;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0.5;
+  opacity: 0.25;
   backdrop-filter: blur(16px);
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  background-color: #0009;
+  #header {
+    background-color: #fff0;
+    width: 100% !important;
+    position: relative;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+  }
+  > .wrapper {
+    flex:1;
+    margin:0 10px 10px 10px;
+    border-radius: 14px;
+  }
 }
 
-#header {
-  background-color: #fff7;
-  backdrop-filter: blur(16px);
-}
 
 #bodyWrapper,
+.pageMain,
 .setWrapper {
   background-color: #fff;
+  padding-top: 0 !important;
 }
 
 
 
 .sidebar {
-  background-color: #fff7;
-
+  background-color: #fff0;
+  .inner>.body {
+    scrollbar-gutter: stable;
+  }
   .fixed .inner>.body {
     scrollbar-gutter: stable;
-    overflow: overlay;
+    overflow: overlay !important;
   }
 }
 
 .widget {
   transition: all 0.2s ease-out;
-  border-radius: 5px;
+  border-radius: 6px;
 
   &:hover {
     background-color: #0001;
@@ -80,11 +98,17 @@ body::before {
   border: none;
   width: 3px;
   background-color: #333;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .content {
-  background-color: #fff;
+  background-color: #fff0;
+}
+.listPreviewObject .item {
+  &.add,.previewObject{
+    background-color: #fff;
+
+  }
 }
 
 .menus {
@@ -107,12 +131,18 @@ body::before {
 }
 
 .button {
-  border-radius: 5px;
+  border-radius: 6px;
 
   &.blank {
-    /* border:none; */
     background-color: #0001;
   }
+  &.black {
+    color: #fff;
+  }
+}
+
+.tooltip {
+  color: #fff;
 }
 
 .blocks .block .icon.dnd {
@@ -123,8 +153,15 @@ body::before {
   border-radius: 3px;
 }
 
-.header .path {
-  border-radius: 6px;
+.header {
+  .path {
+    background-color: #fff7;
+    border-radius: 6px;
+  }
+  .sync {
+    background-color: #fff7;
+  }
+  
 }
 
 .navigationPanel {
@@ -133,17 +170,15 @@ body::before {
   height: 40px;
 }
 
-.inner {
-  .body {
+  .body,.header,.head {
     .icon {
-
       &.plus,
       &.relation,
       &.more,
       &.toggle,
       &.collapse {
         filter: invert(1);
-
+        mix-blend-mode: screen;
         &:hover,
         &.hover {
           background-color: #fff1;
@@ -151,5 +186,56 @@ body::before {
       }
     }
   }
+.pageFlex {
+  scrollbar-gutter: none;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+}
+.page,.setWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0000;
+  backdrop-filter: blur(16px);
+  >.wrapper {
+    flex: 1;
+    padding: 10px !important;
+    box-sizing: border-box;
+    height: calc(100% - 52px);
+    border-radius: 6px;
+    overflow-y:auto;
+    position: relative;
+    overflow-x: hidden;
+    &.blocks{
+      margin-bottom:10px;
+      background-color: #fff;
+    }
+    .editorWrapper.withIconAndCover{
+      padding-top:250px;
+    }
+  }
+}
+.pageMainSet .wrapper {
+  width: 100%;
+  padding-top: 60px;
+}
+.setWrapper {
+  >.blockCover{
+    display: none;
+  }
+}
+.pageMainStore .body .mid .filter .inner{
+  background-color: #fff;
+  border-radius: 6px;
+}
+.pageMainStore .body .items .item .flex{
+  background-color: #fff;
+  border-radius: 6px;
+}
 
+.popups .popup .innerWrap{
+  background-color: #fff;
+}
+.listWidget>.buttons .button{
+  background-color: #fff;
 }
