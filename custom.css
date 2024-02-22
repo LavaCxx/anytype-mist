@@ -209,6 +209,7 @@ body::before,
 
 .body,
 .header,
+.item,
 .head {
   .icon {
 
@@ -218,7 +219,8 @@ body::before,
     &.toggle,
     &.collapse,
     &.btn-search,
-    &.btn-settings {
+    &.btn-settings,
+    &.iconMain {
       filter: invert(1);
       mix-blend-mode: screen;
 
