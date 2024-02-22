@@ -133,6 +133,10 @@ body::before {
       .item {
         background-color: unset;
       }
+
+      .section::after {
+        background-color: #0003;
+      }
     }
 
   }
@@ -171,10 +175,15 @@ body::before {
   .path {
     background-color: #0001;
     border-radius: 6px;
+
+    &:hover {
+      border-color: #0002 !important;
+    }
   }
 
   .sync {
     background-color: #0001;
+    color: var(--color-text-primary);
     height: 28px;
     padding: 0 8px;
   }
@@ -213,6 +222,7 @@ body::before {
 .pageFlex {
   scrollbar-gutter: none;
   overflow: hidden;
+
   backdrop-filter: blur(16px);
 }
 
