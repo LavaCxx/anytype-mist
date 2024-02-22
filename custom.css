@@ -25,7 +25,8 @@ body {
   position: relative;
 }
 
-body::before {
+body::before,
+.sidebar::before {
   content: "";
   position: fixed;
   top: 0;
@@ -83,7 +84,17 @@ body::before {
 
 
 .sidebar {
-  background-color: #fff0;
+  background-color: #fff;
+  border-radius: 0 6px 6px 0;
+  overflow: hidden;
+
+  &.fixed {
+    background-color: #fff0;
+
+    &.sidebar::before {
+      display: none;
+    }
+  }
 
   .inner>.body {
     scrollbar-gutter: stable;
