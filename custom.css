@@ -1,4 +1,3 @@
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -46,10 +45,12 @@ body::before {
   opacity: 0.25;
   backdrop-filter: blur(16px);
 }
+
 .page {
   display: flex;
   flex-direction: column;
   background-color: #0009;
+
   #header {
     background-color: #fff0;
     width: 100% !important;
@@ -57,9 +58,10 @@ body::before {
     flex-shrink: 0;
     backdrop-filter: blur(4px);
   }
-  > .wrapper {
-    flex:1;
-    margin:0 10px 10px 10px;
+
+  >.wrapper {
+    flex: 1;
+    margin: 0 10px 10px 10px;
     border-radius: 14px;
   }
 }
@@ -72,13 +74,21 @@ body::before {
   padding-top: 0 !important;
 }
 
+.pageMainGraph .wrapper {
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 0 10px 10px 0;
+}
+
 
 
 .sidebar {
   background-color: #fff0;
+
   .inner>.body {
     scrollbar-gutter: stable;
   }
+
   .fixed .inner>.body {
     scrollbar-gutter: stable;
     overflow: overlay !important;
@@ -104,8 +114,11 @@ body::before {
 .content {
   background-color: #fff0;
 }
+
 .listPreviewObject .item {
-  &.add,.previewObject{
+
+  &.add,
+  .previewObject {
     background-color: #fff;
 
   }
@@ -114,7 +127,7 @@ body::before {
 .menus {
   .menu {
     backdrop-filter: blur(16px);
-    background-color: #fff7;
+    background-color: #fff6;
 
     &.vertical {
       .item {
@@ -136,6 +149,7 @@ body::before {
   &.blank {
     background-color: #0001;
   }
+
   &.black {
     color: #fff;
   }
@@ -155,13 +169,16 @@ body::before {
 
 .header {
   .path {
-    background-color: #fff7;
+    background-color: #0001;
     border-radius: 6px;
   }
+
   .sync {
-    background-color: #fff7;
+    background-color: #0001;
+    height: 28px;
+    padding: 0 8px;
   }
-  
+
 }
 
 .navigationPanel {
@@ -170,72 +187,89 @@ body::before {
   height: 40px;
 }
 
-  .body,.header,.head {
-    .icon {
-      &.plus,
-      &.relation,
-      &.more,
-      &.toggle,
-      &.collapse {
-        filter: invert(1);
-        mix-blend-mode: screen;
-        &:hover,
-        &.hover {
-          background-color: #fff1;
-        }
+.body,
+.header,
+.head {
+  .icon {
+
+    &.plus,
+    &.relation,
+    &.more,
+    &.toggle,
+    &.collapse,
+    &.btn-search,
+    &.btn-settings {
+      filter: invert(1);
+      mix-blend-mode: screen;
+
+      &:hover,
+      &.hover {
+        background-color: #fff1;
       }
     }
   }
+}
+
 .pageFlex {
   scrollbar-gutter: none;
   overflow: hidden;
   backdrop-filter: blur(16px);
 }
-.page,.setWrapper {
+
+.page,
+.setWrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
   background-color: #0000;
   backdrop-filter: blur(16px);
+
   >.wrapper {
     flex: 1;
     padding: 10px !important;
     box-sizing: border-box;
     height: calc(100% - 52px);
     border-radius: 6px;
-    overflow-y:auto;
+    overflow-y: auto;
     position: relative;
     overflow-x: hidden;
-    &.blocks{
-      margin-bottom:10px;
+
+    &.blocks {
+      margin-bottom: 10px;
       background-color: #fff;
     }
-    .editorWrapper.withIconAndCover{
-      padding-top:250px;
+
+    .editorWrapper.withIconAndCover {
+      padding-top: 250px;
     }
   }
 }
+
 .pageMainSet .wrapper {
   width: 100%;
   padding-top: 60px;
 }
+
 .setWrapper {
-  >.blockCover{
+  >.blockCover {
     display: none;
   }
 }
-.pageMainStore .body .mid .filter .inner{
-  background-color: #fff;
-  border-radius: 6px;
-}
-.pageMainStore .body .items .item .flex{
+
+.pageMainStore .body .mid .filter .inner {
   background-color: #fff;
   border-radius: 6px;
 }
 
-.popups .popup .innerWrap{
+.pageMainStore .body .items .item .flex {
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.popups .popup .innerWrap {
   background-color: #fff;
 }
-.listWidget>.buttons .button{
+
+.listWidget>.buttons .button {
   background-color: #fff;
 }
