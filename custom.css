@@ -209,7 +209,7 @@ body::before,
 
 .body,
 .header,
-.item,
+.fromHeader .item,
 .head {
   .icon {
 
@@ -296,4 +296,8 @@ body::before,
 
 .listWidget>.buttons .button {
   background-color: #fff;
+}
+
+.empty, .emptyText {
+  color: #0009;
 }
