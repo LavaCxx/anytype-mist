@@ -23,6 +23,7 @@
 
 body {
   position: relative;
+  font-family: 'SN Pro';
 }
 
 body::before,
@@ -40,10 +41,10 @@ body::before,
     radial-gradient(circle at 20px 20px,
       rgba(46, 103, 161, 0.8),
       transparent 25%),
-    #182336;
+    #18233699;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0.25;
+  opacity: 0.4;
   backdrop-filter: blur(16px);
 }
 
