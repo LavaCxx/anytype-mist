@@ -23,7 +23,7 @@
 
 body {
   position: relative;
-  font-family: 'SN Pro';
+  font-family: 'SN Pro','霞鹜文楷';
 }
 
 body::before,
@@ -75,7 +75,47 @@ body::before,
   background-color: #fff;
   padding-top: 0 !important;
 }
-
+.pageMainMedia {
+  > div {
+    height: 100%;
+  }
+  .inner {
+    background: #0000 !important;
+  }
+  .blocks{
+    height:calc(100% - 62px);
+    border-radius: 6px;
+    background-color: #fff;
+    &.vertical {
+      width: calc(100% - 20px);
+    }
+  }
+}
+.pageMainSet .wrapper {
+  width: calc(100% - 10px);
+  padding-top: 60px;
+}
+.pageMainType {
+  > div {
+    display:flex;
+    flex-direction: column;
+    height: calc(100% - 10px);
+  }
+  .wrapper{
+    background-color: #fff;
+    width: calc(100% - 10px);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    flex:1;
+    > * {
+      width:50%;
+      min-width: 400px;
+    }
+  }
+}
 .pageMainGraph .wrapper {
   background-color: #fff;
   border-radius: 6px;
@@ -144,7 +184,6 @@ body::before,
   &.add,
   .previewObject {
     background-color: #fff;
-
   }
 }
 
@@ -282,10 +321,7 @@ body::before,
   }
 }
 
-.pageMainSet .wrapper {
-  width: 100%;
-  padding-top: 60px;
-}
+
 
 .setWrapper {
   >.blockCover {
@@ -341,7 +377,7 @@ html {
 
       background: linear-gradient(to right,
           #04003db2 100px, #613d0980, #05132199);
-      opacity: .55;
+      opacity: .6;
     }
 
     .sidebar {
@@ -362,13 +398,23 @@ html {
     .setWrapper {
       background-color: #1414144d;
     }
-
+    .pageMainMedia {
+      .blocks{
+        background-color: #0000;
+      }
+    }
     .pageMainGraph .wrapper {
       background-color: #0000;
     }
 
     .pageMainArchive .wrapper {
       background-color: #0001;
+    }
+
+    .pageMainType {
+      .wrapper{
+        background-color: #0000;
+      }
     }
 
 
@@ -436,7 +482,13 @@ html {
     .navigationPanel {
       background-color: #ffffff09;
     }
+    .listPreviewObject .item {
 
+      &.add,
+      .previewObject {
+        background-color: #0000;
+      }
+    }
     .block.blockCover {
 
       border-radius: 12px;
@@ -464,6 +516,4 @@ html {
       }
     }
   }
-
-
 }
