@@ -367,7 +367,12 @@ body::before,
   background-color: #fffd;
   backdrop-filter: blur(16px);
 }
-
+.previewWrapper {
+   .content {
+     background: #fffd;
+     backdrop-filter: blur(16px);
+   }
+}
 
 html {
   &.themeDark {
@@ -514,6 +519,11 @@ html {
       &:hover {
         background-color: #fff9;
       }
+    }
+     .previewWrapper {
+       .content {
+         background: #0009;
+       }
     }
   }
 }
