@@ -373,6 +373,12 @@ body::before,
      backdrop-filter: blur(16px);
    }
 }
+.progress {
+  .inner {
+     background: #fffd;
+     backdrop-filter: blur(16px);
+  }
+}
 
 html {
   &.themeDark {
@@ -524,6 +530,11 @@ html {
        .content {
          background: #0009;
        }
+    }
+    .progress {
+      .inner {
+        background: #0009;
+      }
     }
   }
 }
