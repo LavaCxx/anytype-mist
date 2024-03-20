@@ -8,14 +8,9 @@
 ::-webkit-scrollbar-thumb {
   background-color: #0003;
   border-radius: 6px;
-
-  &:hover {
-    background-color: #0009;
-  }
 }
 
 :root {
-  /* scrollbar-gutter: stable; */
   --color-bg-primary: #fff0;
   --color-shape-highlight-medium: #0002;
   --color-control-accent: #000d;
@@ -23,7 +18,7 @@
 
 body {
   position: relative;
-  font-family: 'SN Pro','霞鹜文楷';
+  font-family: 'SN Pro';
 }
 
 body::before,
@@ -95,7 +90,7 @@ body::before,
   width: calc(100% - 10px);
   padding-top: 60px;
 }
-.pageMainType {
+.pageMainType,.pageMainRelation {
   > div {
     display:flex;
     flex-direction: column;
@@ -367,18 +362,6 @@ body::before,
   background-color: #fffd;
   backdrop-filter: blur(16px);
 }
-.previewWrapper {
-   .content {
-     background: #fffd;
-     backdrop-filter: blur(16px);
-   }
-}
-.progress {
-  .inner {
-     background: #fffd;
-     backdrop-filter: blur(16px);
-  }
-}
 
 html {
   &.themeDark {
@@ -422,7 +405,7 @@ html {
       background-color: #0001;
     }
 
-    .pageMainType {
+    .pageMainType,.pageMainRelation {
       .wrapper{
         background-color: #0000;
       }
@@ -521,20 +504,7 @@ html {
 
     ::-webkit-scrollbar-thumb {
       background-color: #fff3;
-
-      &:hover {
-        background-color: #fff9;
-      }
-    }
-     .previewWrapper {
-       .content {
-         background: #0009;
-       }
-    }
-    .progress {
-      .inner {
-        background: #0009;
-      }
     }
   }
 }
+
